@@ -1,4 +1,4 @@
-package com.example.waze_smart_shopping
+package com.example.google_maps_in_flutter
 
 import android.os.Bundle
 
