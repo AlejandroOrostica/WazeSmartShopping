@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_side_menu/screens/main_menu.dart';
+import 'package:mapas/screens/main_menu.dart';
 
 void main() => runApp(StartApp());
 
@@ -8,7 +8,7 @@ class StartApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "waze Smart Shopping App",
+      title: "Waze Smart Shopping App",
       home: MainMenu(),
     );
   }
