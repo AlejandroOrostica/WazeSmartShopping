@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mapas/models/infra/menu_item.dart';
+import 'package:mapas/screens/lista_tiendas.dart';
 import 'package:mapas/screens/tiendas.dart';
 import 'package:mapas/screens/inicio.dart';
 import 'package:mapas/screens/buscar.dart';
@@ -125,7 +126,8 @@ class MainMenuState extends State<MainMenu> {
           "Mapas", 'assets/images/icono-mapa.png', Colors.yellow, () => new Mapas()),
       new MenuItem(
           "Buscar Tienda", 'assets/images/icono-buscar.png', Colors.red, () => new Buscar()),
-
+      new MenuItem(
+          "Lista Tiendas", 'assets/images/icono-buscar.png', Colors.white, () => new Directory()),
     ];
     return menuItems;
   }

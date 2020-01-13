@@ -12,56 +12,56 @@ class Tiendas extends StatelessWidget {
             nombre:"A3D",
             logo:"assets/images/a3d.jpg",
             nivel:"Nivel 1, local 70",
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: Colors.lightGreen[500],
           ),
 
           TiendaItemWidget(
             nombre:"Adidas",
             logo:"assets/images/adidas.jpg",
             nivel:"Nivel 2, local 40 ",
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.lightGreen[300],
           ),
 
           TiendaItemWidget(
             nombre:"Bamers",
             logo:"assets/images/bamers.png",
             nivel:"Nivel -1, local 11",
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: Colors.lightGreen[500],
           ),
 
           TiendaItemWidget(
             nombre:"Burger King",
             logo:"assets/images/burger.jpg",
             nivel:"Nivel 3, local 115",
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.lightGreen[300],
           ),
 
           TiendaItemWidget(
             nombre:"Cineplanet",
             logo:"assets/images/cineplanet.jpg",
             nivel:"Nivel 3, local 19",
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: Colors.lightGreen[500],
           ),
 
           TiendaItemWidget(
             nombre:"Santander",
             logo:"assets/images/santander.jpg",
             nivel:"Nivel -1, local 80",
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.lightGreen[300],
           ),
 
           TiendaItemWidget(
             nombre:"Ripley",
             logo:"assets/images/ripley.jpg",
             nivel:"Nivel 1,2,3, local 98",
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: Colors.lightGreen[500],
           ),
 
           TiendaItemWidget(
             nombre:"Paris",
             logo:"assets/images/paris.jpg",
             nivel:"Nivel 1,2,3 local 65",
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.lightGreen[300],
           ),
         ],
       )

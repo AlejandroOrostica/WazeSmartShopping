@@ -54,6 +54,9 @@ class Maps extends State<Mapas> {
                 ],
               ),
             ),
+            Center(
+              child: Text('Mapa Piso: '+(photoIndex + 1).toString()),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
