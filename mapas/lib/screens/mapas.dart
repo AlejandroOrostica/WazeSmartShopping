@@ -5,6 +5,7 @@ class Mapas extends StatefulWidget {
   Maps createState() => new Maps();
 }
 
+
 class Maps extends State<Mapas> {
   int photoIndex = 0;
 
@@ -37,6 +38,8 @@ class Maps extends State<Mapas> {
               child: Stack(
                 children: <Widget>[
                   Container(
+                    child: CustomPaint(foregroundPainter: MyPainter(),
+                    child: Image(image: AssetImage(photos[photoIndex]),),),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
@@ -79,6 +82,14 @@ class Maps extends State<Mapas> {
         ));
   }
 }
+
+class MyPainter extends CustomPainter{
+  void paint(Canvas canvas, Size size){
+    canvas.drawCircle(Offset(190,190), 5, Paint());
+  }
+  bool shouldRepaint (MyPainter old) => true;
+}
+
 
 class SelectedPhoto extends StatelessWidget {
 
