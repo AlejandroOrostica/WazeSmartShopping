@@ -29,6 +29,7 @@ class Maps extends State<Mapas> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = new Size(100, 100);
     return new Scaffold(
         backgroundColor: Colors.lightGreen[300],
         body: Column(
@@ -39,12 +40,9 @@ class Maps extends State<Mapas> {
                 children: <Widget>[
                   Container(
                     child: CustomPaint(foregroundPainter: MyPainter(),
-                    child: Image(image: AssetImage(photos[photoIndex]),),),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        image: DecorationImage(
-                            image: AssetImage(photos[photoIndex]),
-                            fit: BoxFit.cover)),
+                    size: size,
+                    child: Image(image: AssetImage(photos[photoIndex]),
+                    fit: BoxFit.cover,),),
                     height: 500.0,
                     width: 350.0,
                   ),
@@ -84,8 +82,10 @@ class Maps extends State<Mapas> {
 }
 
 class MyPainter extends CustomPainter{
-  void paint(Canvas canvas, Size size){
-    canvas.drawCircle(Offset(190,190), 5, Paint());
+  Size size1 = new Size(200, 200); // Estaba probando si servía hacer esto y pasarselo como parámetro a paint y si sirve 
+  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
+
+    canvas.drawCircle(Offset(size.width/2.5,size.height/1.28), 5, Paint());
   }
   bool shouldRepaint (MyPainter old) => true;
 }
