@@ -125,7 +125,6 @@ class MainMenuState extends State<MainMenu> {
           "Mapas", 'assets/images/icono-mapa.png', Colors.yellow, () => new Mapas()),
       new MenuItem(
           "Buscar Tienda", 'assets/images/icono-buscar.png', Colors.red, () => new Buscar()),
-      
     ];
     return menuItems;
   }
