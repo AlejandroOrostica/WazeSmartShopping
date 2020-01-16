@@ -70,47 +70,27 @@ class DataSearch extends SearchDelegate<String>{
 
   @override
   Widget buildResults(BuildContext context) {
-    if(query=="Adidas"){
-        //aqui van todas las del primer piso 
 
-        //SE TIENE QUE LLAMAR A LA FUNCION QUE CREO EL HUGO PARA MOSTRAR EL MAPA
-        // SE TIENE Q LLAMAR A FUNCION QUE CREO EL ALE PARA PINTAR EL PUNTO, PERO SE TIENE Q HACER COMO UNA LISTA CON LAS QUE SON DEL PRIMER PISO 
-        //PARA PONER ONDA UN IF, SI ES X TIENDA SU UBICACION DEL PUNTO ES: X,Y 
+    final piso1 =["Ripley","La Polar","Azaleia","Ficcus","Movistar","Palumbo"];
+    final piso2 =["Ripley", "La Polar", "Amphora", "Doite","Gmo", "Gacel"];
+    final piso3= ["Ripley","La Polar","Doggis","Cineplanet","KFC","Lippi","Maicao","Preunic"];
+    int i,j,k;
+    if(query==piso1[i]){
+          
+          //aqui van todas las del primer piso 
 
-        //TIENDAS DEL PRIMER PISO DE LA LISTA:
-        //Ripley
-        //La polar
-        //Azaleia
-        //Ficcus
-        //Movistar
-        //Palumbo
+          //SE TIENE QUE LLAMAR A LA FUNCION QUE CREO EL HUGO PARA MOSTRAR EL MAPA
+          // SE TIENE Q LLAMAR A FUNCION QUE CREO EL ALE PARA PINTAR EL PUNTO, PERO SE TIENE Q HACER COMO UNA LISTA CON LAS QUE SON DEL PRIMER PISO 
+          //PARA PONER ONDA UN IF, SI ES X TIENDA SU UBICACION DEL PUNTO ES: X,Y 
     }
-    else if(query=="Amphora"){
+
+    else if(query==piso2[j]){
         //aqui van todas las del segundo piso
         //LO MISMO DE LA OPCION ANTERIOR
-
-        //TIENDAS DEL SEGUNDO PISO DE LA LISTA:
-        //Ripley
-        //La Polar
-        //Amphora
-        //Doite
-        //Gmo
-        //Gacel
     }
-    else if(query=="Paris"){
+    else if(query==piso3[k]){
       // Aqui van todas las del tercer piso 
       //LO MISMO DE LA OPCION ANTERIOR
-
-      //TIENDAS DEL TERCER PISO DE LA LISTA: 
-      //Ripley
-      //La polar
-      //Adidas
-      //Doggis
-      //Cineplanet
-      //KFC
-      //Lippi
-      //Maicao
-      //Preunic
     }
   }
 
