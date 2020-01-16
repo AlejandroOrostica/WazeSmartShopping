@@ -29,7 +29,7 @@ class Maps extends State<Mapas> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = new Size(100, 100);
+    Size size = new Size(150, 100);
     return new Scaffold(
         backgroundColor: Colors.lightGreen[300],
         body: Column(
@@ -39,8 +39,7 @@ class Maps extends State<Mapas> {
               child: Stack(
                 children: <Widget>[
                   Container(
-                    child: CustomPaint(foregroundPainter: MyPainter(),
-                    size: size,
+                    child: CustomPaint(foregroundPainter: MyPainter1(),
                     child: Image(image: AssetImage(photos[photoIndex]),
                     fit: BoxFit.cover,),),
                     height: 500.0,
@@ -85,11 +84,19 @@ class MyPainter extends CustomPainter{
   Size size1 = new Size(200, 200); // Estaba probando si servía hacer esto y pasarselo como parámetro a paint y si sirve 
   void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
 
-    canvas.drawCircle(Offset(size.width/2.5,size.height/1.28), 5, Paint());
+    canvas.drawCircle(Offset(size.width,size.height), 5, Paint());
   }
   bool shouldRepaint (MyPainter old) => true;
 }
 
+class MyPainter1 extends CustomPainter{
+  Size size1 = new Size(200, 200); // Estaba probando si servía hacer esto y pasarselo como parámetro a paint y si sirve 
+  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
+
+    canvas.drawCircle(Offset(size.width/2,size.height/2), 5, Paint());
+  }
+  bool shouldRepaint (MyPainter1 old) => true;
+}
 
 class SelectedPhoto extends StatelessWidget {
 

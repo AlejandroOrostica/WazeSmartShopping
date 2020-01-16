@@ -20,6 +20,7 @@ class Buscar extends StatelessWidget {
   }
 }
 
+
 class DataSearch extends SearchDelegate<String>{
   final tiendas = [
     "Ripley",
@@ -64,9 +65,11 @@ class DataSearch extends SearchDelegate<String>{
       ),
       
       onPressed: () {
-        close(context, null);
+        close(context, "Azaleia");
       });
   }
+
+
 
   @override
   Widget buildResults(BuildContext context) {
@@ -75,8 +78,15 @@ class DataSearch extends SearchDelegate<String>{
     final piso2 =["Ripley", "La Polar", "Amphora", "Doite","Gmo", "Gacel"];
     final piso3= ["Ripley","La Polar","Doggis","Cineplanet","KFC","Lippi","Maicao","Preunic"];
     int i,j,k;
-    if(query==piso1[i]){
-          
+    if(query==piso1[2]){ // Algo así debería ser !
+          return Container(
+            child: CustomPaint(foregroundPainter: Azaleia(),// POR EJEMPLO AQUÍ LLAMÉ A Azaleia AL FINAL ESTÁ ESA CLASE
+            size: Size(300,300),
+            child: Image(image: AssetImage('assets/images/p1.jpg'),
+            fit: BoxFit.cover,),),
+            height: 500.0,
+            width: 350.0,
+          );
           //aqui van todas las del primer piso 
 
           //SE TIENE QUE LLAMAR A LA FUNCION QUE CREO EL HUGO PARA MOSTRAR EL MAPA
@@ -122,4 +132,20 @@ class DataSearch extends SearchDelegate<String>{
     );
   } 
 
+}
+
+class Rypley extends CustomPainter{ 
+  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
+
+    canvas.drawCircle(Offset(size.width/2.5,size.height/1.28), 5, Paint()); // Aquí poner las coordenadas de esa tienda
+  }
+  bool shouldRepaint (Rypley old) => true;
+}
+
+class Azaleia extends CustomPainter{ 
+  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
+
+    canvas.drawCircle(Offset(size.width/2.5,size.height/1.28), 5, Paint()); // Aquí las de esa tienda
+  }
+  bool shouldRepaint (Azaleia old) => true;
 }
