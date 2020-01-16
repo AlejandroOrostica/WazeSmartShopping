@@ -6,7 +6,6 @@ class Buscar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Buscar tienda"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search),
@@ -44,9 +43,9 @@ class DataSearch extends SearchDelegate<String>{
   ];
 
   final tiendasrecientes =[
-    "Paris",
-    "Preunic",
-    "Cineplanet",
+    "Amphora",
+    "KFC",
+    "Azaleia",
   ];
 
   @override
@@ -77,7 +76,7 @@ class DataSearch extends SearchDelegate<String>{
     final piso1 =["Ripley","La Polar","Azaleia","Ficcus","Movistar","Palumbo"];
     final piso2 =["Ripley", "La Polar", "Amphora", "Doite","Gmo", "Gacel"];
     final piso3= ["Ripley","La Polar","Doggis","Cineplanet","KFC","Lippi","Maicao","Preunic"];
-    int i,j,k;
+    
     if(query==piso1[2]){ // Algo así debería ser !
           return Container(
             child: CustomPaint(foregroundPainter: Azaleia(),// POR EJEMPLO AQUÍ LLAMÉ A Azaleia AL FINAL ESTÁ ESA CLASE
@@ -87,20 +86,27 @@ class DataSearch extends SearchDelegate<String>{
             height: 500.0,
             width: 350.0,
           );
-          //aqui van todas las del primer piso 
-
-          //SE TIENE QUE LLAMAR A LA FUNCION QUE CREO EL HUGO PARA MOSTRAR EL MAPA
-          // SE TIENE Q LLAMAR A FUNCION QUE CREO EL ALE PARA PINTAR EL PUNTO, PERO SE TIENE Q HACER COMO UNA LISTA CON LAS QUE SON DEL PRIMER PISO 
-          //PARA PONER ONDA UN IF, SI ES X TIENDA SU UBICACION DEL PUNTO ES: X,Y 
     }
 
-    else if(query==piso2[j]){
-        //aqui van todas las del segundo piso
-        //LO MISMO DE LA OPCION ANTERIOR
+    else if(query==piso2[2]){
+          return Container(
+            child: CustomPaint(foregroundPainter: Amphora(),// POR EJEMPLO AQUÍ LLAMÉ A Azaleia AL FINAL ESTÁ ESA CLASE
+            size: Size(300,300),
+            child: Image(image: AssetImage('assets/images/p2.jpg'),
+            fit: BoxFit.cover,),),
+            height: 500.0,
+            width: 350.0,
+          );
     }
-    else if(query==piso3[k]){
-      // Aqui van todas las del tercer piso 
-      //LO MISMO DE LA OPCION ANTERIOR
+    else if(query==piso3[4]){
+          return Container(
+            child: CustomPaint(foregroundPainter: KFC(),// POR EJEMPLO AQUÍ LLAMÉ A Azaleia AL FINAL ESTÁ ESA CLASE
+            size: Size(300,300),
+            child: Image(image: AssetImage('assets/images/p3.jpg'),
+            fit: BoxFit.cover,),),
+            height: 500.0,
+            width: 350.0,
+          );
     }
   }
 
@@ -134,18 +140,27 @@ class DataSearch extends SearchDelegate<String>{
 
 }
 
-class Rypley extends CustomPainter{ 
-  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
-
-    canvas.drawCircle(Offset(size.width/2.5,size.height/1.28), 5, Paint()); // Aquí poner las coordenadas de esa tienda
-  }
-  bool shouldRepaint (Rypley old) => true;
-}
 
 class Azaleia extends CustomPainter{ 
   void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
 
-    canvas.drawCircle(Offset(size.width/2.5,size.height/1.28), 5, Paint()); // Aquí las de esa tienda
+    canvas.drawCircle(Offset(140,187), 5, Paint()); // Aquí las de esa tienda
   }
   bool shouldRepaint (Azaleia old) => true;
+}
+
+class Amphora extends CustomPainter{ 
+  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
+
+    canvas.drawCircle(Offset(165,288), 5, Paint()); // Aquí las de esa tienda
+  }
+  bool shouldRepaint (Amphora old) => true;
+}
+
+class KFC extends CustomPainter{ 
+  void paint(Canvas canvas, Size size,){ // Si no se le especifica size es el tamano de la imagen
+
+    canvas.drawCircle(Offset(145,78), 5, Paint()); // Aquí las de esa tienda
+  }
+  bool shouldRepaint (KFC old) => true;
 }
